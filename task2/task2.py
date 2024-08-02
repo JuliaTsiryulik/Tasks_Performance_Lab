@@ -33,6 +33,7 @@ def main(file_1, file_2):
   
   except Exception as e:
     print(f"Ошибка при обработке файла: {e}")
+    sys.exit(1)
 
 
 circle_file = sys.argv[1]
