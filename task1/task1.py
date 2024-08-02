@@ -28,4 +28,4 @@ n = int(sys.argv[1])
 m = int(sys.argv[2])
 
 res = round_array(n, m)
-print("Полученный путь:", res)
+print(res)
