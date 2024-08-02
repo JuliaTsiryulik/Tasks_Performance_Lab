@@ -25,4 +25,5 @@ try:
   
 except Exception as e:
   print(f"Ошибка при обработке файла: {e}")
+  sys.exit(1)
 
