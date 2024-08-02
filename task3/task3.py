@@ -1,4 +1,5 @@
 import json
+import sys
 
 def fill_values(test_structure, values_dict):
   for test in test_structure:
@@ -28,5 +29,8 @@ def main(values_file, tests_file, report_file):
   with open(report_file,'w', encoding='utf-8') as rf:
     json.dump(report, rf, ensure_ascii=False, indent=4)
 
+values_file = sys.argv[1]
+tests_file = sys.argv[2]
+report_file = sys.argv[3]
 
-main('values.json', 'tests.json', 'report.json')
+main(values_file, tests_file, report_file)

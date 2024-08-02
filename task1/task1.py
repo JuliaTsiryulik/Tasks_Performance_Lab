@@ -1,5 +1,6 @@
-def round_array(args):
-  n, m = args[0], args[1]
+import sys
+
+def round_array(n, m):
 
   round_arr = [(i % n) + 1 for i in range((m - 1) * n)]
   round_arr.append(1)
@@ -23,7 +24,8 @@ def round_array(args):
   return ''.join(map(str, path))
 
 
-args = [int(a) for a in input("Введите n и m: ").split()]
+n = int(sys.argv[1])
+m = int(sys.argv[2])
 
-res = round_array(args)
+res = round_array(n, m)
 print("Полученный путь:", res)

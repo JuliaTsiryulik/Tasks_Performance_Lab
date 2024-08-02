@@ -1,3 +1,5 @@
+import sys
+
 def read_numbers(filename):
   with open(filename, 'r') as file:
     return [int(line.strip()) for line in file]
@@ -14,7 +16,7 @@ def calculate_min_moves(nums):
   return total_moves
 
 
-filename = input("Введите имя файла: ")
+filename = sys.argv[1]
 
 try:
   nums = read_numbers(filename)

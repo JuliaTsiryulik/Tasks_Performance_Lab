@@ -1,3 +1,5 @@
+import sys
+
 def read_numbers(filename):
   with open(filename, 'r') as file:
     return [list(map(int, line.strip().split())) for line in file]
@@ -32,4 +34,8 @@ def main(file_1, file_2):
   except Exception as e:
     print(f"Ошибка при обработке файла: {e}")
 
-main('circle.txt', 'dot.txt')
+
+circle_file = sys.argv[1]
+dots_file = sys.argv[2]
+
+main(circle_file, dots_file)
